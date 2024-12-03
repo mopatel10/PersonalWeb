@@ -1,0 +1,30 @@
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <!-- Previous Button -->
+        <li class="page-item {{#if pagination.href.previous}}enabled{{else}}disabled{{/if}}">
+            {{#if pagination.href.previous}}
+                <a class="page-link" href="{{pagination.href.previous}}">Previous</a>
+            {{else}}
+                <span class="page-link">Previous</span>
+            {{/if}}
+        </li>
+
+        <!-- Page Numbers -->
+        {{#each pagination.hrefs as |href index|}}
+            <li class="page-item {{#ifCond ../pagination.pageNumber index}}active{{/ifCond}}">
+                <a class="page-link" href="{{href}}">
+                    {{add index 1}}
+                </a>
+            </li>
+        {{/each}}
+
+        <!-- Next Button -->
+        <li class="page-item {{#if pagination.href.next}}enabled{{else}}disabled{{/if}}">
+            {{#if pagination.href.next}}
+                <a class="page-link" href="{{pagination.href.next}}">Next</a>
+            {{else}}
+                <span class="page-link">Next</span>
+            {{/if}}
+        </li>
+    </ul>
+</nav>

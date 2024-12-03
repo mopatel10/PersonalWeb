@@ -1,0 +1,49 @@
+---
+pagination:
+  data: posts
+  size: 5
+  alias: post
+
+layout: "layouts/base.hbs"
+title: My Blog!
+---
+
+<h1>{{ title }}</h1>
+<hr>
+
+{{#each pagination.items}}
+
+  <div class="blog-card" style="display: flex; flex-direction: column; margin: 1rem auto; box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1); margin-bottom: 1.6%; background: #fff; line-height: 1.4; font-family: sans-serif; border-radius: 5px; overflow: hidden; z-index: 0;">
+  <div class="meta" style="position: relative; z-index: 0; height: 200px;">
+      <div class="photo" style="background-image: url({{this.image}}); position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: center; transition: transform 0.2s;"></div>
+    <ul class="details" style="margin: auto; padding: 0; list-style: none;">
+      <li class="author" style="display: inline-block;"><a href="#" style="color: inherit;">{{this.author}}</a></li>
+      <li class="date" style="display: inline-block;">{{this.date}}</li>
+      <li class="tags">
+        <ul style="padding: 0; list-style: none;">
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Learn</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Code</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">HTML</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">CSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description" style="padding: 1rem; background: #fff; position: relative; z-index: 1;">
+    <h1 style="line-height: 1; margin: 0; font-size: 1.7rem;">{{this.title}}</h1>
+    <h2 style="font-size: 1rem; font-weight: 300; text-transform: uppercase; color: #a2a2a2; margin-top: 5px;">{{this.author}}</h2>
+    <p style="position: relative; margin: 1rem 0 0;">{{this.content}}</p>
+    <p class="read-more" style="text-align: right;">
+      <a href="#" style="color: #5ad67d; display: inline-block; position: relative;">Read More</a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+{{/each}}
+
+<!-- Pagination Controls -->
+<div class="pagination">
+  {{> "partials/pagination"}}
+</div>

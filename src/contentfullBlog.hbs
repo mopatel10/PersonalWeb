@@ -1,0 +1,111 @@
+---
+pagination:
+  data: myblog    # Use the name of the data file (without extension)
+  size: 5         # Number of posts per page
+  alias: post
+layout: "layouts/base.hbs"
+title: My Contentful Blog
+---
+
+<!-- Container for blog posts -->
+<div class="blog-container">
+  {{#each pagination.items}}
+    <div class="card">
+      <!-- Header with cover image -->
+      <div class="card__header">
+        <!-- Displaying the image with dynamic URL -->
+        <img src="{{this.fields.CoverImage.fields.file.url}}" alt="{{this.fields.Title}}" class="card__image" width="600">
+      </div>
+
+      <!-- Body with title, tags, and description -->
+      <div class="card__body">
+          <span class="tag tag-blue" >Learn</span></a> <!-- Example Tag; you can add more dynamic tags as needed -->
+        <h4>{{this.fields.Title}}</h4>
+        <p>{{this.fields.Description}}</p>
+      </div>
+
+      <!-- Footer with user info -->
+      <div class="card__footer">
+        <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+          <div class="user__info">
+            <h5>Mohammed Patel</h5> <!-- Static name; you can make this dynamic if needed -->
+            <small>{{this.fields.DatePublished}}</small> <!-- Displaying the publication date -->
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<!-- Pagination Controls -->
+<div class="pagination">
+  {{> "partials/pagination"}}
+</div>
+
+<style>
+  
+
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates responsive columns */
+    gap: 2rem; /* Space between cards */
+    max-width: 1200px; /* Container max width */
+    margin: 2rem auto; /* Center container horizontally */
+    padding: 0 1rem; /* Optional padding */
+  }
+
+  .blog-container .card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card__header {
+    height: 200px; /* Fixed height to ensure images are uniform */
+    overflow: hidden;
+  }
+
+  .card__header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+
+  .card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    min-height: 100px; /* Minimum height for the content area */
+  }
+
+  .card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto; /* Push footer to the bottom to align across cards */
+  }
+
+.user__image {
+  border-radius: 50%;
+  width: 50px !important;   /* Set the desired width */
+  height: 50px !important;  /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+  
+
+
+  .user__info > small {
+    color: #666;
+  }
+</style>

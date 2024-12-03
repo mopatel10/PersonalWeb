@@ -1,0 +1,166 @@
+[
+    {
+      "id": 1,
+      "title": "First Blog Post",
+      "author": "John Doe",
+      "date": "2024-10-01",
+      "content": "This is the content of the first blog post.",
+      "image": "/public/images/img-1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Another Post",
+      "author": "Jane Smith",
+      "date": "2024-10-02",
+      "content": "Here is some more blog content in the second post.",
+      "image": "/public/images/img-2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Learning JavaScript",
+      "author": "John Doe",
+      "date": "2024-10-03",
+      "content": "JavaScript is an essential language for web development.",
+      "image": "/public/images/img-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Introduction to HTML",
+      "author": "Jane Smith",
+      "date": "2024-10-04",
+      "content": "HTML is the building block of web pages.",
+      "image": "/public/images/img-4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "CSS for Beginners",
+      "author": "John Doe",
+      "date": "2024-10-05",
+      "content": "CSS is used to style web pages and make them visually appealing.",
+      "image": "/public/images/img-5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Understanding Flexbox",
+      "author": "Jane Smith",
+      "date": "2024-10-06",
+      "content": "Flexbox is a powerful layout tool in CSS for aligning items.",
+      "image": "/public/images/img-6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Responsive Web Design",
+      "author": "John Doe",
+      "date": "2024-10-07",
+      "content": "Responsive design ensures your website looks great on any device.",
+      "image": "/public/images/img-7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Introduction to Python",
+      "author": "Jane Smith",
+      "date": "2024-10-08",
+      "content": "Python is a versatile programming language used in various fields.",
+      "image": "/public/images/img-8.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Version Control with Git",
+      "author": "John Doe",
+      "date": "2024-10-09",
+      "content": "Git helps developers manage changes in code efficiently.",
+      "image": "/public/images/img-9.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Deploying Websites",
+      "author": "Jane Smith",
+      "date": "2024-10-10",
+      "content": "Learn how to deploy your website to a hosting platform.",
+      "image": "/public/images/img-10.jpg"
+    },
+
+    {
+      "id": 11,
+      "title": "Getting Started with Node.js",
+      "author": "John Doe",
+      "date": "2024-10-11",
+      "content": "Node.js allows you to run JavaScript on the server side.",
+      "image": "/public/images/img-11.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Exploring APIs",
+      "author": "Jane Smith",
+      "date": "2024-10-12",
+      "content": "APIs enable communication between different software applications.",
+      "image": "/public/images/img-12.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Mastering GitHub",
+      "author": "John Doe",
+      "date": "2024-10-13",
+      "content": "GitHub is a popular platform for hosting and collaborating on code.",
+      "image": "/public/images/img-13.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Building RESTful APIs",
+      "author": "Jane Smith",
+      "date": "2024-10-14",
+      "content": "Learn how to build scalable and maintainable RESTful APIs.",
+      "image": "/public/images/img-14.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Introduction to Web Security",
+      "author": "John Doe",
+      "date": "2024-10-15",
+      "content": "Web security is crucial to protect users and data online.",
+      "image": "/public/images/img-15.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Using jQuery in Web Projects",
+      "author": "Jane Smith",
+      "date": "2024-10-16",
+      "content": "jQuery simplifies DOM manipulation and event handling in JavaScript.",
+      "image": "/public/images/img-16.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Web Performance Optimization",
+      "author": "John Doe",
+      "date": "2024-10-17",
+      "content": "Optimize your website's performance for faster load times.",
+      "image": "/public/images/img-17.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Designing User Interfaces",
+      "author": "Jane Smith",
+      "date": "2024-10-18",
+      "content": "A good UI design enhances user experience and engagement.",
+      "image": "/public/images/img-18.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Database Management Basics",
+      "author": "John Doe",
+      "date": "2024-10-19",
+      "content": "Learn how to manage databases with SQL.",
+      "image": "/public/images/img-19.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Getting Started with React",
+      "author": "Jane Smith",
+      "date": "2024-10-20",
+      "content": "React is a popular JavaScript library for building user interfaces.",
+      "image": "/public/images/img-20.jpg"
+    }
+]
+
+  
+

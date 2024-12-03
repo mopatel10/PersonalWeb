@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Contentful Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+</head>
+
+<body style="background-image: url('/public/images/bg.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+    <div class="container-fluid" style="color: aqua;">
+        <!-- Sidebar Section -->
+        <div class="col-md-3">
+            <div class="d-flex flex-column vh-100 p-3" style="background-color: #090122;">
+    <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+        <span class="fs-4">MHP</span>
+    </a>
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/index" class="nav-link">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/about" class="nav-link">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="/readme" class="nav-link">
+                ReadMe
+            </a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 A2
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a href = "/contentfullBlog"><button class="dropdown-item" type="button" >Blog</button></a>
+                    <a href = "/writeups/1"><button class="dropdown-item" type="button" >Write Ups</button></a>
+                    <a href = "/search"><button class="dropdown-item" type="button" >Search</button></a>
+                </div>
+            </div>
+
+        </li>
+        
+    </ul>
+</div>
+
+<style>
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+
+ .user__image {
+  border-radius: 50%;
+  width: 75px;   /* Set the desired width */
+  height: 75px;  /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+  </style> <!-- Sidebar Partial -->
+
+            <!-- Footer content at the bottom of the sidebar -->
+            <div class="sidebar-footer">
+                <footer >
+                        ©<span id="current-year"></span> <p>Copyright: Mohammed Patel</p>
+                        
+                        <a href="/terms-and-conditions">Terms and Conditions</a>
+                </footer>
+                
+                <script>
+                    // JavaScript to dynamically set the current year
+                    document.getElementById("current-year").textContent = new Date().getFullYear();
+                </script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+                <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="col-md-9">
+            <main class="container my-5">
+                
+<!-- Container for blog posts -->
+<div class="blog-container">
+    <div class="card">
+      <!-- Header with cover image -->
+      <div class="card__header">
+        <!-- Displaying the image with dynamic URL -->
+        <img src="//images.ctfassets.net/bcp0nzroeezy/ZaCFfsSExMOM7mqvzm3UL/83351954e78c9096311213f904e369eb/infinit.gif" alt="What a Journey!" class="card__image" width="600">
+      </div>
+
+      <!-- Body with title, tags, and description -->
+      <div class="card__body">
+          <span class="tag tag-blue" >Learn</span></a> <!-- Example Tag; you can add more dynamic tags as needed -->
+        <h4>What a Journey!</h4>
+        <p>Started of with learning about SSG&#x27;s to templating languages to improving my site with pagination and filters and implementing my organizational skill to make everything look pretty. I understand this is just HTML and CSS but imagine the possibilities with Frameworks and other libraries; the possibilities are truly endless</p>
+      </div>
+
+      <!-- Footer with user info -->
+      <div class="card__footer">
+        <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+          <div class="user__info">
+            <h5>Mohammed Patel</h5> <!-- Static name; you can make this dynamic if needed -->
+            <small>2024-11-07</small> <!-- Displaying the publication date -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <!-- Header with cover image -->
+      <div class="card__header">
+        <!-- Displaying the image with dynamic URL -->
+        <img src="//images.ctfassets.net/bcp0nzroeezy/436KvOFwT3SgdAlF7OOArF/bb599c99a0aa030e641d569b8e450124/fall.png" alt="New blog with Contentful as a headless CMS" class="card__image" width="600">
+      </div>
+
+      <!-- Body with title, tags, and description -->
+      <div class="card__body">
+          <span class="tag tag-blue" >Learn</span></a> <!-- Example Tag; you can add more dynamic tags as needed -->
+        <h4>New blog with Contentful as a headless CMS</h4>
+        <p>This is my attempted at creating a content for a blog page using contentful. So far this is very simple, just like strapi. I may even like this better because its not only a headless CMS but also a standard CMS. Also, its free, unlike strapi where my free subscription ends in 13 days lol.</p>
+      </div>
+
+      <!-- Footer with user info -->
+      <div class="card__footer">
+        <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+          <div class="user__info">
+            <h5>Mohammed Patel</h5> <!-- Static name; you can make this dynamic if needed -->
+            <small>2024-11-07</small> <!-- Displaying the publication date -->
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Pagination Controls -->
+<div class="pagination">
+  <nav aria-label="Page navigation">
+      <ul class="pagination">
+          <!-- Previous Button -->
+          <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+          </li>
+  
+          <!-- Page Numbers -->
+              <li class="page-item active">
+                  <a class="page-link" href="/contentfullBlog/">
+                      1
+                  </a>
+              </li>
+  
+          <!-- Next Button -->
+          <li class="page-item disabled">
+                  <span class="page-link">Next</span>
+          </li>
+      </ul>
+  </nav>
+</div>
+
+<style>
+  
+
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates responsive columns */
+    gap: 2rem; /* Space between cards */
+    max-width: 1200px; /* Container max width */
+    margin: 2rem auto; /* Center container horizontally */
+    padding: 0 1rem; /* Optional padding */
+  }
+
+  .blog-container .card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card__header {
+    height: 200px; /* Fixed height to ensure images are uniform */
+    overflow: hidden;
+  }
+
+  .card__header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+
+  .card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    min-height: 100px; /* Minimum height for the content area */
+  }
+
+  .card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto; /* Push footer to the bottom to align across cards */
+  }
+
+.user__image {
+  border-radius: 50%;
+  width: 50px !important;   /* Set the desired width */
+  height: 50px !important;  /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+  
+
+
+  .user__info > small {
+    color: #666;
+  }
+</style>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Write Ups</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+</head>
+
+<body style="background-image: url('/public/images/bg.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+    <div class="container-fluid" style="color: aqua;">
+        <!-- Sidebar Section -->
+        <div class="col-md-3">
+            <div class="d-flex flex-column vh-100 p-3" style="background-color: #090122;">
+    <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+        <span class="fs-4">MHP</span>
+    </a>
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/index" class="nav-link">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/about" class="nav-link">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="/readme" class="nav-link">
+                ReadMe
+            </a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 A2
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a href = "/contentfullBlog"><button class="dropdown-item" type="button" >Blog</button></a>
+                    <a href = "/writeups/1"><button class="dropdown-item" type="button" >Write Ups</button></a>
+                    <a href = "/search"><button class="dropdown-item" type="button" >Search</button></a>
+                </div>
+            </div>
+
+        </li>
+        
+    </ul>
+</div>
+
+<style>
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+
+ .user__image {
+  border-radius: 50%;
+  width: 75px;   /* Set the desired width */
+  height: 75px;  /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+  </style> <!-- Sidebar Partial -->
+
+            <!-- Footer content at the bottom of the sidebar -->
+            <div class="sidebar-footer">
+                <footer >
+                        ©<span id="current-year"></span> <p>Copyright: Mohammed Patel</p>
+                        
+                        <a href="/terms-and-conditions">Terms and Conditions</a>
+                </footer>
+                
+                <script>
+                    // JavaScript to dynamically set the current year
+                    document.getElementById("current-year").textContent = new Date().getFullYear();
+                </script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+                <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="col-md-9">
+            <main class="container my-5">
+                
+
+    <article>
+        <h2></h2>
+        <div>
+            <h4>Introduction</h4>
+<hr>
+<p>This lab write-up explores various templating languages and their role in modern web development. The goal was to understand how these tools streamline static site generation (SSG) and enhance flexibility, simplicity, and performance. This exercise also included learning about 11ty’s configuration options and the significance of organizing file structures effectively. By comparing popular templating engines and their features, I gained insights into selecting the right tools for different project needs.</p>
+<hr>
+<p>Static Site Generation (SSG) was a new concept for me, and I was unfamiliar with SSGs like 11ty. One challenge was understanding 11ty’s configuration options and file structure. The default configuration was simple, but customizing it required looking into 11ty’s documentation. I also realized the significance of file configuration through this course; it clarified why organizing files into folders is important. I learned that the purpose of SSGs is to increase flexibility, simplicity, and performance. 11ty supports multiple templating languages and file formats, making it highly adaptable to different needs. The tool is straightforward to set up and use, with minimal configuration required to get started. Like other SSGs, 11ty generates fast, static sites that are easy to deploy and host, thus increasing performance.</p>
+<hr>
+<h4>Different Template Engines</h4>
+<h5>HandleBars</h5>
+<p><em><strong>Handlebars is a popular templating engine that extends Mustache templates, offering additional features for dynamic HTML generation.</strong></em></p>
+<ul>
+<li>Pros:<ul>
+<li>Easy to learn and use, with a straightforward syntax that makes template creation quick and efficient.</li>
+<li>Supports reusable components (partials) and custom helpers, which allows for modular and maintainable code.</li>
+<li>Encourages keeping logic out of templates, leading to a cleaner separation of presentation and business logic.</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>The limited logic can be restrictive for complex scenarios, requiring additional JavaScript or workarounds.</li>
+<li>Does not support template inheritance natively, which can lead to repetitive code in larger projects.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5>Pug</h5>
+<p> <em><strong>Pug, formaly knowns as Jade, is a templating engine that uses an indentation-based syntax, aiming to produce cleaner and more concise HTML.</strong></em></p>
+<ul>
+<li>Pros:<ul>
+<li>Improves readability with its indentation-based syntax, making templates easier to write and maintain.</li>
+<li>Generates clean HTML, which can improve performance and reduce unnecessary markup.</li>
+<li>Supports mixins, template inheritance, and includes, which are powerful tools for creating complex and reusable templates.</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>Errors in Pug templates can be harder to debug due to the abstraction and potential syntax issues.</li>
+<li>The indentation-based syntax can be unfamiliar and may require a learning period.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5>EmbeddedJavaScript (EJS)</h5>
+<p> <em><strong>EJS is a simple templating engine that allows embedding JavaScript directly within HTML, making it a flexible choice for generating dynamic content.</strong></em></p>
+<ul>
+<li>Pros:<ul>
+<li>Allows embedding JavaScript logic directly in templates, providing flexibility for dynamic content generation.</li>
+<li>Uses a syntax similar to plain HTML with embedded JavaScript, which can be easier for developers familiar with HTML and JavaScript.</li>
+<li>Easy to extend with additional logic and functionalities as needed.</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>Embedding JavaScript in templates can lead to a mixing of logic and presentation.</li>
+<li>Lacks some advanced templating features found in other engines like partials or inheritance, which can limit its capabilities for complex scenarios.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4>My Choice: <em>EJS</em></h4>
+<p>I chose EJS for the assignment based on the following considerations:</p>
+<ul>
+<li>Familiarity and Ease of Use: EJS has a syntax that closely resembles HTML with embedded JavaScript, which can be more intuitive and quicker to work with, especially for those who are comfortable with JavaScript.</li>
+<li>JavaScript Integration: The ability to include JavaScript logic directly in the templates provides flexibility for dynamic content generation and manipulation, which can be beneficial for more interactive or data-driven static sites.</li>
+<li>Simplicity: From what I have read, EJS is straightforward and easy to set up, making it suitable for projects.</li>
+</ul>
+<hr>
+<h4>Other SSG Applications</h4>
+<p>Popular SSG&#39;s:</p>
+<ul>
+<li>Next.js</li>
+<li>Hugo</li>
+<li>Gatsby</li>
+<li>Docusaurus</li>
+</ul>
+<p>And many more.</p>
+<ul>
+<li>Common Pros:<ul>
+<li>Performance</li>
+<li>Simplicity</li>
+</ul>
+</li>
+<li>Common Cons<ul>
+<li>Limited Support for Dynamic Features</li>
+<li>Build Times</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4>Configuration</h4>
+<p>We use a callback function within our <code>eleventy.config.js</code> which opens up oportunities to many customization options.</p>
+<pre><code class="language-js">module.exports = function(eleventyConfig) 
+{
+  eleventyConfig.addPassthroughCopy(&quot;src/public&quot;);
+  // Return your Object options:
+  return {
+    dir: {
+      input: &quot;src&quot;,
+      output: &quot;dist&quot;
+    }
+  }
+};
+</code></pre>
+<p>Code is straght forward, this configuration tells where the input folder is and the name of the output folder.<br>We also use <code>js eleventyConfig.addPassthroughCopy(&quot;src/public&quot;); </code> to specify files or directories for Eleventy to copy.</p>
+<h4>Front Matter</h4>
+<p><strong>What?:</strong> <em>Front Matter allows the developer to add metadata at the top of their application to specify how the program should behave</em>.<br><strong>Example:</strong></p>
+<pre><code>---
+title: &quot;My Website&quot;
+date: &quot;09-14-2024&quot;
+tags: [&quot;web development&quot;, &quot;static sites&quot;]
+author: &quot;Van Gogh&quot;
+---
+</code></pre>
+<p><strong>How does it relate to the web:</strong><br>Front matter enables SSG to dynamically generate pages with relevant details based on the metadata, providing consistent formatting across the site.</p>
+<hr>
+<hr>
+<hr>
+<h2>RESOURCES</h2>
+<ul>
+<li><p><a href="https://colorlib.com/wp/top-templating-engines-for-javascript/">Top Templating Engines</a></p>
+</li>
+<li><p><a href="https://codechronicle.medium.com/pros-and-cons-of-popular-javascript-templating-engines-e5d1e3d4504f">Templating Engines Pros &amp; Cons</a></p>
+</li>
+<li><p><a href="https://ejs.co/">Everything about EJS</a></p>
+</li>
+<li><p><a href="https://www.11ty.dev/docs/config/">11ty Configuerations</a></p>
+</li>
+<li><p><a href="https://jamstack.org/generators/">SSGs</a></p>
+</li>
+<li><p><a href="https://www.gatsbyjs.com/docs/glossary/static-site-generator/">More SSGs</a></p>
+</li>
+<li><p><a href="https://dpericich.medium.com/what-is-front-matter-and-how-is-it-used-to-create-dynamic-webpages-9d8dc053b457#:~:text=For%20programming%20front%20matter%20refers,toml%20and%20json%20as%20well">Front Matter</a>.</p>
+</li>
+<li><p><a href="https://www.11ty.dev/docs/data-frontmatter/">11ty: Front Matter</a></p>
+</li>
+<li><p><a href="https://chatgpt.com/">ChatGPT - Used for further understnding of content :)</a></p>
+</li>
+</ul>
+
+        </div>
+    </article>
+
+<div class="pagination">
+  <nav aria-label="Page navigation">
+      <ul class="pagination">
+          <!-- Previous Button -->
+          <li class="page-item enabled">
+                  <a class="page-link" href="/writeups/2/">Previous</a>
+          </li>
+  
+          <!-- Page Numbers -->
+              <li class="page-item ">
+                  <a class="page-link" href="/writeups/1/">
+                      1
+                  </a>
+              </li>
+              <li class="page-item ">
+                  <a class="page-link" href="/writeups/2/">
+                      2
+                  </a>
+              </li>
+              <li class="page-item active">
+                  <a class="page-link" href="/writeups/3/">
+                      3
+                  </a>
+              </li>
+  
+          <!-- Next Button -->
+          <li class="page-item disabled">
+                  <span class="page-link">Next</span>
+          </li>
+      </ul>
+  </nav>
+</div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

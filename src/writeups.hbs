@@ -1,0 +1,23 @@
+---
+pagination:
+  data: writeUps    # Use the name of the data file (without extension)
+  size: 1         # Number of posts per page
+  alias: labs
+permalink: "/writeups/{{ add pagination.pageNumber 1 }}/"
+layout: "layouts/base.hbs"
+title: Write Ups
+---
+
+
+{{#each pagination.items}}
+    <article>
+        <h2>{{this.fields.Title}}</h2>
+        <div>
+            {{{markdown this.fields.mainContent}}}
+        </div>
+    </article>
+{{/each}}
+
+<div class="pagination">
+  {{> "partials/pagination"}}
+</div>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Write Ups</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+</head>
+
+<body style="background-image: url('/public/images/bg.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+    <div class="container-fluid" style="color: aqua;">
+        <!-- Sidebar Section -->
+        <div class="col-md-3">
+            <div class="d-flex flex-column vh-100 p-3" style="background-color: #090122;">
+    <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+        <span class="fs-4">MHP</span>
+    </a>
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/index" class="nav-link">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/about" class="nav-link">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="/readme" class="nav-link">
+                ReadMe
+            </a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 A2
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a href = "/contentfullBlog"><button class="dropdown-item" type="button" >Blog</button></a>
+                    <a href = "/writeups/1"><button class="dropdown-item" type="button" >Write Ups</button></a>
+                    <a href = "/search"><button class="dropdown-item" type="button" >Search</button></a>
+                </div>
+            </div>
+
+        </li>
+        
+    </ul>
+</div>
+
+<style>
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+
+ .user__image {
+  border-radius: 50%;
+  width: 75px;   /* Set the desired width */
+  height: 75px;  /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+  </style> <!-- Sidebar Partial -->
+
+            <!-- Footer content at the bottom of the sidebar -->
+            <div class="sidebar-footer">
+                <footer >
+                        ©<span id="current-year"></span> <p>Copyright: Mohammed Patel</p>
+                        
+                        <a href="/terms-and-conditions">Terms and Conditions</a>
+                </footer>
+                
+                <script>
+                    // JavaScript to dynamically set the current year
+                    document.getElementById("current-year").textContent = new Date().getFullYear();
+                </script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+                <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="col-md-9">
+            <main class="container my-5">
+                
+
+    <article>
+        <h2></h2>
+        <div>
+            <p>This write-up explores different headless CMS platforms and compares their features to understand their practical applications in modern web development. The purpose is to identify how each CMS caters to various project needs, balancing factors like customization, scalability, and ease of use. By evaluating CMS options such as Strapi, Contentful, Sanity, Prismic, and Ghost, I aimed to determine the best tools for specific scenarios, emphasizing their strengths and limitations. The comparison highlights the importance of CMS selection in streamlining workflows and achieving efficient content management solutions.</p>
+
+<hr>
+
+<h2>Strapi</h2>
+
+<p>Strapi is an open-source, self-hosted headless CMS, providing developers with full customization over the CMS setup and functionality. Built on <strong>Node.js</strong>, Strapi is geared toward developers who want control over both content modeling and API design.</p>  
+<strong>Research found:</strong>
+<ul>
+    <li>Strapi is entirely open-source, allowing developers to customize and extend the CMS as needed, without being locked into proprietary services.</li>
+    <li>It includes built-in GraphQL support, which is great for quick and efficient data retrieval, letting front ends request only the specific data they need.</li>
+    <li>Strapi offers an extensive roles and permissions system, making it useful for projects where one might need granular control over who can access what data.</li>
+</ul>
+
+<hr>
+
+<h2>Contentful</h2>
+
+<p>Contentful is a SaaS (Software as a Service) CMS that emphasizes structured content management with a focus on <strong>cloud accessibility</strong>. Contentful is an API-first CMS, which means it was built from the ground up to provide flexible content delivery across different platforms.</p>  
+<strong>Research found:</strong>
+<ul>
+    <li>Contentful has powerful RESTful and GraphQL APIs, making it simple to integrate with various front ends and third-party tools.</li>
+    <li>The system emphasizes content structure, making it possible to create a consistent content model across channels.</li>
+    <li>Known for its wide range of integrations, Contentful is especially popular in enterprise settings where teams need to connect to other services or work with complex data.</li>
+</ul>
+
+<hr>
+
+<h2>Sanity</h2>
+
+<p>Sanity is a unique headless CMS with real-time collaboration capabilities, ideal for projects that involve multiple contributors. It offers a <strong>customizable editing experience</strong> and a powerful text editor that’s adaptable to various content types.</p>  
+<strong>Research found:</strong>
+<ul>
+    <li>Sanity enables multiple people to edit content simultaneously, making it a valuable tool for projects with high collaboration needs.</li>
+    <li>Sanity introduces GROQ, its own query language designed for working with structured content, which allows for nuanced data querying.</li>
+    <li>Known for its powerful editor, Sanity is highly customizable, allowing developers to tailor the interface for different kinds of content or media-rich projects.</li>
+</ul>
+
+<hr>
+
+<h2>Prismic</h2>
+
+<p>Prismic provides a different approach with its <strong>"Slice" model</strong>—essentially building blocks that allow you to create modular and reusable components for different content types. This feature is perfect for marketing teams and editorial projects that often require flexibility in updating and rearranging content blocks.</p>  
+<strong>Research found:</strong>
+<ul>
+    <li>This modular approach means developers can create reusable sections that are easy to update without needing to redesign the whole page.</li>
+    <li>Prismic supports scheduling, making it a favorite for teams with editorial workflows that rely on time-sensitive content.</li>
+    <li>Prismic offers straightforward integrations with popular frameworks like <strong>Next.js</strong> and <strong>Nuxt.js</strong>, making it suitable for teams building on Jamstack.</li>
+</ul>
+
+<hr>
+
+<h2>Ghost</h2>
+
+<p>Ghost is often associated with publishing and blogging, making it a simple yet powerful choice for content-focused sites. Originally created for bloggers, Ghost has grown into a headless CMS with tools for <strong>subscriptions</strong> and <strong>memberships</strong>, which support monetization models.</p>  
+<strong>Research found:</strong>
+<ul>
+    <li>Ghost has built-in membership and subscription options, making it perfect for sites that rely on direct audience support.</li>
+    <li>It’s known for a clean user experience, making it easy to work with, especially if content editors prioritize straightforward functionality.</li>
+    <li>While Ghost can be used as a headless CMS, its static content capabilities make it a great fit for static websites.</li>
+</ul>
+
+<hr>
+
+<h2>CMS that I think are "the best"</h2>
+
+<ul>
+    <li><strong>Strapi</strong>: Its open-source nature provides hands-on control, allowing you to understand the ins and outs of customizing a CMS. You’ll gain experience with managing self-hosting, configuring permissions, and creating custom API endpoints.</li>
+    <li><strong>Contentful</strong>: Contentful’s cloud-based setup introduces you to a SaaS CMS environment, highlighting the convenience and challenges of a fully hosted solution. Its structured content model and integration ecosystem.</li>
+    <il><strong>Final thoughts</strong>:If I was to choose one out of the two, it would be Contentful. There is one advantage I see contentful having over strapi and its that for Starpi, you need to first deploy the local server in order for the javascript to fetch the date, where as Contentful had a live server 24/7, so when you run your 11ty, it automaticly fetches the relevent data. No need to deploy the CMS then 11ty.</il>
+</ul>
+
+<p>Both of these CMSs provide a well-rounded experience, from backend flexibility to cloud-hosted convenience.</p>
+<hr>
+
+<h2>Resources</h2>
+<ul>
+    <li><a href="https://docs.strapi.io/">Strapi Official Site</a></li>
+    <li><a href="https://www.contentful.com">Contentful Official Site</a></li>
+    <li><a href="https://www.sanity.io">Sanity Official Site</a></li>
+    <li><a href="https://prismic.io">Prismic Official Site</a></li>
+    <li><a href="https://ghost.org">Ghost Official Site</a></li>
+</ul>
+<hr>
+        </div>
+    </article>
+
+<div class="pagination">
+  <nav aria-label="Page navigation">
+      <ul class="pagination">
+          <!-- Previous Button -->
+          <li class="page-item enabled">
+                  <a class="page-link" href="/writeups/1/">Previous</a>
+          </li>
+  
+          <!-- Page Numbers -->
+              <li class="page-item ">
+                  <a class="page-link" href="/writeups/1/">
+                      1
+                  </a>
+              </li>
+              <li class="page-item active">
+                  <a class="page-link" href="/writeups/2/">
+                      2
+                  </a>
+              </li>
+              <li class="page-item ">
+                  <a class="page-link" href="/writeups/3/">
+                      3
+                  </a>
+              </li>
+  
+          <!-- Next Button -->
+          <li class="page-item enabled">
+                  <a class="page-link" href="/writeups/3/">Next</a>
+          </li>
+      </ul>
+  </nav>
+</div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  .pagination-nav {
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    margin: 20px 0; /* Space above and below */
+}
+
+.pagination-nav a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Change color for links */
+    margin: 0 10px; /* Space between links */
+    padding: 10px 15px; /* Padding around the links */
+    border: 1px solid #007bff; /* Border around the links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.pagination-nav a:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: white; /* Change text color on hover */
+}
+.blog-post img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 300px; /* Set your desired maximum width */
+    max-height: 200px; /* Set your desired maximum height */
+    object-fit: cover; /* Crops the image to fit the specified dimensions */
+}
+.blog-container {
+    display: flex;
+    flex-direction: column; /* Arrange posts vertically */
+    align-items: center; /* Center align items */
+    margin: 0 auto; /* Center the container */
+    max-width: 800px; /* Set a maximum width */
+    color: #0e65bb;
+}
+
+.blog-post {
+    background-color: #f9f9f9; /* Light background for posts */
+    border: 1px solid #b70505; /* Border around posts */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    margin: 15px 0; /* Space between posts */
+    width: 100%; /* Full width */
+    
+}
+
+h2 {
+    color: #3aacf7; /* Darker color for headings */
+}
+
+/* Ensure full height and width for the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow:hidden; /* Prevents background from being visible on the sides */
+    font-family: "Quicksand";;
+}
+
+.container-fluid {
+    
+    flex-direction: row;
+    height: 100vh; /* Full viewport height */
+    padding: 0;
+    overflow: hidden;
+    width: flex;
+}
+
+/* Sidebar fixed position */
+.col-md-3 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #090122;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+
+/* Main content container positioned to the right of sidebar */
+.col-md-9 {
+    margin-left: 250px; /* Space for the sidebar */
+    height: 100vh;
+    overflow-y: auto; /* Allows independent scrolling */
+    padding: 20px;
+    box-sizing: border-box;
+    width: auto; /* Fills remaining viewport width */
+}
+
+/* Ensure links inside the sidebar match the font color */
+.col-md-3 a {
+    color: #63b3d8; /* Change to match sidebar font color */
+    text-decoration: none;
+}
+
+.col-md-3 a:hover {
+    color: #0e65bb; /* Optional hover color for links */
+}
+
+.sidebar-footer {
+    width: 100%; /* Ensures the footer takes full width of the sidebar */
+    
+    padding: 10px; /* Padding for the footer content */
+    font-size: 14px;
+    color: #63b3d8; /* Footer text color */
+    text-align: center;
+   
+    
+}

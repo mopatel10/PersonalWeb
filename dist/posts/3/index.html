@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Blog!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+</head>
+
+<body style="background-image: url('/public/images/bg.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+    <div class="container-fluid" style="color: aqua;">
+        <!-- Sidebar Section -->
+        <div class="col-md-3">
+            <div class="d-flex flex-column vh-100 p-3" style="background-color: #090122;">
+    <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+        <span class="fs-4">MHP</span>
+    </a>
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/index" class="nav-link">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/about" class="nav-link">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="/readme" class="nav-link">
+                ReadMe
+            </a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 A2
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a href = "/contentfullBlog"><button class="dropdown-item" type="button" >Blog</button></a>
+                    <a href = "/writeups/1"><button class="dropdown-item" type="button" >Write Ups</button></a>
+                    <a href = "/search"><button class="dropdown-item" type="button" >Search</button></a>
+                </div>
+            </div>
+
+        </li>
+        
+    </ul>
+</div>
+
+<style>
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+
+ .user__image {
+  border-radius: 50%;
+  width: 75px;   /* Set the desired width */
+  height: 75px;  /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+  </style> <!-- Sidebar Partial -->
+
+            <!-- Footer content at the bottom of the sidebar -->
+            <div class="sidebar-footer">
+                <footer >
+                        ©<span id="current-year"></span> <p>Copyright: Mohammed Patel</p>
+                        
+                        <a href="/terms-and-conditions">Terms and Conditions</a>
+                </footer>
+                
+                <script>
+                    // JavaScript to dynamically set the current year
+                    document.getElementById("current-year").textContent = new Date().getFullYear();
+                </script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+                <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="col-md-9">
+            <main class="container my-5">
+                
+<h1>My Blog!</h1>
+<hr>
+
+
+  <div class="blog-card" style="display: flex; flex-direction: column; margin: 1rem auto; box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1); margin-bottom: 1.6%; background: #fff; line-height: 1.4; font-family: sans-serif; border-radius: 5px; overflow: hidden; z-index: 0;">
+  <div class="meta" style="position: relative; z-index: 0; height: 200px;">
+      <div class="photo" style="background-image: url(/public/images/img-16.jpg); position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: center; transition: transform 0.2s;"></div>
+    <ul class="details" style="margin: auto; padding: 0; list-style: none;">
+      <li class="author" style="display: inline-block;"><a href="#" style="color: inherit;">Jane Smith</a></li>
+      <li class="date" style="display: inline-block;">2024-10-16</li>
+      <li class="tags">
+        <ul style="padding: 0; list-style: none;">
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Learn</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Code</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">HTML</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">CSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description" style="padding: 1rem; background: #fff; position: relative; z-index: 1;">
+    <h1 style="line-height: 1; margin: 0; font-size: 1.7rem;">Using jQuery in Web Projects</h1>
+    <h2 style="font-size: 1rem; font-weight: 300; text-transform: uppercase; color: #a2a2a2; margin-top: 5px;">Jane Smith</h2>
+    <p style="position: relative; margin: 1rem 0 0;">jQuery simplifies DOM manipulation and event handling in JavaScript.</p>
+    <p class="read-more" style="text-align: right;">
+      <a href="#" style="color: #5ad67d; display: inline-block; position: relative;">Read More</a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+
+  <div class="blog-card" style="display: flex; flex-direction: column; margin: 1rem auto; box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1); margin-bottom: 1.6%; background: #fff; line-height: 1.4; font-family: sans-serif; border-radius: 5px; overflow: hidden; z-index: 0;">
+  <div class="meta" style="position: relative; z-index: 0; height: 200px;">
+      <div class="photo" style="background-image: url(/public/images/img-17.jpg); position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: center; transition: transform 0.2s;"></div>
+    <ul class="details" style="margin: auto; padding: 0; list-style: none;">
+      <li class="author" style="display: inline-block;"><a href="#" style="color: inherit;">John Doe</a></li>
+      <li class="date" style="display: inline-block;">2024-10-17</li>
+      <li class="tags">
+        <ul style="padding: 0; list-style: none;">
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Learn</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Code</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">HTML</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">CSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description" style="padding: 1rem; background: #fff; position: relative; z-index: 1;">
+    <h1 style="line-height: 1; margin: 0; font-size: 1.7rem;">Web Performance Optimization</h1>
+    <h2 style="font-size: 1rem; font-weight: 300; text-transform: uppercase; color: #a2a2a2; margin-top: 5px;">John Doe</h2>
+    <p style="position: relative; margin: 1rem 0 0;">Optimize your website&#x27;s performance for faster load times.</p>
+    <p class="read-more" style="text-align: right;">
+      <a href="#" style="color: #5ad67d; display: inline-block; position: relative;">Read More</a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+
+  <div class="blog-card" style="display: flex; flex-direction: column; margin: 1rem auto; box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1); margin-bottom: 1.6%; background: #fff; line-height: 1.4; font-family: sans-serif; border-radius: 5px; overflow: hidden; z-index: 0;">
+  <div class="meta" style="position: relative; z-index: 0; height: 200px;">
+      <div class="photo" style="background-image: url(/public/images/img-18.jpg); position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: center; transition: transform 0.2s;"></div>
+    <ul class="details" style="margin: auto; padding: 0; list-style: none;">
+      <li class="author" style="display: inline-block;"><a href="#" style="color: inherit;">Jane Smith</a></li>
+      <li class="date" style="display: inline-block;">2024-10-18</li>
+      <li class="tags">
+        <ul style="padding: 0; list-style: none;">
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Learn</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Code</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">HTML</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">CSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description" style="padding: 1rem; background: #fff; position: relative; z-index: 1;">
+    <h1 style="line-height: 1; margin: 0; font-size: 1.7rem;">Designing User Interfaces</h1>
+    <h2 style="font-size: 1rem; font-weight: 300; text-transform: uppercase; color: #a2a2a2; margin-top: 5px;">Jane Smith</h2>
+    <p style="position: relative; margin: 1rem 0 0;">A good UI design enhances user experience and engagement.</p>
+    <p class="read-more" style="text-align: right;">
+      <a href="#" style="color: #5ad67d; display: inline-block; position: relative;">Read More</a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+
+  <div class="blog-card" style="display: flex; flex-direction: column; margin: 1rem auto; box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1); margin-bottom: 1.6%; background: #fff; line-height: 1.4; font-family: sans-serif; border-radius: 5px; overflow: hidden; z-index: 0;">
+  <div class="meta" style="position: relative; z-index: 0; height: 200px;">
+      <div class="photo" style="background-image: url(/public/images/img-19.jpg); position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: center; transition: transform 0.2s;"></div>
+    <ul class="details" style="margin: auto; padding: 0; list-style: none;">
+      <li class="author" style="display: inline-block;"><a href="#" style="color: inherit;">John Doe</a></li>
+      <li class="date" style="display: inline-block;">2024-10-19</li>
+      <li class="tags">
+        <ul style="padding: 0; list-style: none;">
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Learn</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Code</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">HTML</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">CSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description" style="padding: 1rem; background: #fff; position: relative; z-index: 1;">
+    <h1 style="line-height: 1; margin: 0; font-size: 1.7rem;">Database Management Basics</h1>
+    <h2 style="font-size: 1rem; font-weight: 300; text-transform: uppercase; color: #a2a2a2; margin-top: 5px;">John Doe</h2>
+    <p style="position: relative; margin: 1rem 0 0;">Learn how to manage databases with SQL.</p>
+    <p class="read-more" style="text-align: right;">
+      <a href="#" style="color: #5ad67d; display: inline-block; position: relative;">Read More</a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+
+  <div class="blog-card" style="display: flex; flex-direction: column; margin: 1rem auto; box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1); margin-bottom: 1.6%; background: #fff; line-height: 1.4; font-family: sans-serif; border-radius: 5px; overflow: hidden; z-index: 0;">
+  <div class="meta" style="position: relative; z-index: 0; height: 200px;">
+      <div class="photo" style="background-image: url(/public/images/img-20.jpg); position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: center; transition: transform 0.2s;"></div>
+    <ul class="details" style="margin: auto; padding: 0; list-style: none;">
+      <li class="author" style="display: inline-block;"><a href="#" style="color: inherit;">Jane Smith</a></li>
+      <li class="date" style="display: inline-block;">2024-10-20</li>
+      <li class="tags">
+        <ul style="padding: 0; list-style: none;">
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Learn</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">Code</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">HTML</a></li>
+          <li style="display: inline-block;"><a href="#" style="color: inherit;">CSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description" style="padding: 1rem; background: #fff; position: relative; z-index: 1;">
+    <h1 style="line-height: 1; margin: 0; font-size: 1.7rem;">Getting Started with React</h1>
+    <h2 style="font-size: 1rem; font-weight: 300; text-transform: uppercase; color: #a2a2a2; margin-top: 5px;">Jane Smith</h2>
+    <p style="position: relative; margin: 1rem 0 0;">React is a popular JavaScript library for building user interfaces.</p>
+    <p class="read-more" style="text-align: right;">
+      <a href="#" style="color: #5ad67d; display: inline-block; position: relative;">Read More</a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+
+<!-- Pagination Controls -->
+<div class="pagination">
+  <nav aria-label="Page navigation">
+      <ul class="pagination">
+          <!-- Previous Button -->
+          <li class="page-item enabled">
+                  <a class="page-link" href="/posts/2/">Previous</a>
+          </li>
+  
+          <!-- Page Numbers -->
+              <li class="page-item ">
+                  <a class="page-link" href="/posts/">
+                      1
+                  </a>
+              </li>
+              <li class="page-item ">
+                  <a class="page-link" href="/posts/1/">
+                      2
+                  </a>
+              </li>
+              <li class="page-item ">
+                  <a class="page-link" href="/posts/2/">
+                      3
+                  </a>
+              </li>
+              <li class="page-item active">
+                  <a class="page-link" href="/posts/3/">
+                      4
+                  </a>
+              </li>
+  
+          <!-- Next Button -->
+          <li class="page-item disabled">
+                  <span class="page-link">Next</span>
+          </li>
+      </ul>
+  </nav>
+</div>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

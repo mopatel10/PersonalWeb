@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+</head>
+
+<body style="background-image: url('/public/images/bg.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+    <div class="container-fluid" style="color: aqua;">
+        <!-- Sidebar Section -->
+        <div class="col-md-3">
+            <div class="d-flex flex-column vh-100 p-3" style="background-color: #090122;">
+    <div class="user">
+          <img src="/public/images/pf.jpg" alt="user__image" class="user__image">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+        <span class="fs-4">MHP</span>
+    </a>
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/index" class="nav-link">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/about" class="nav-link">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="/readme" class="nav-link">
+                ReadMe
+            </a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 A2
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a href = "/contentfullBlog"><button class="dropdown-item" type="button" >Blog</button></a>
+                    <a href = "/writeups/1"><button class="dropdown-item" type="button" >Write Ups</button></a>
+                    <a href = "/search"><button class="dropdown-item" type="button" >Search</button></a>
+                </div>
+            </div>
+
+        </li>
+        
+    </ul>
+</div>
+
+<style>
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+
+ .user__image {
+  border-radius: 50%;
+  width: 75px;   /* Set the desired width */
+  height: 75px;  /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+  </style> <!-- Sidebar Partial -->
+
+            <!-- Footer content at the bottom of the sidebar -->
+            <div class="sidebar-footer">
+                <footer >
+                        ©<span id="current-year"></span> <p>Copyright: Mohammed Patel</p>
+                        
+                        <a href="/terms-and-conditions">Terms and Conditions</a>
+                </footer>
+                
+                <script>
+                    // JavaScript to dynamically set the current year
+                    document.getElementById("current-year").textContent = new Date().getFullYear();
+                </script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+                <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="col-md-9">
+            <main class="container my-5">
+                
+
+<div>
+  <input id="myInput" type="text" placeholder="Search by title..." />
+  <select id="contentTypeFilter">
+    <option value="all">All</option>
+    <option value="myblog">My Blog</option>
+    <option value="writeUps">Write-Ups</option>
+  </select>
+</div>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody id="myTable">
+      <tr class="post myblog" data-type="myblog" data-date="2024-11-07">
+        <td>What a Journey!</td>
+        <td><p>Started of with learning about SSG&#39;s to templating languages to improving my site with pagination and filters and implementing my organizational skill to make everything look pretty. I understand this is just HTML and CSS but imagine the possibilities with Frameworks and other libraries; the possibilities are truly endless</p>
+</td>
+        <td>2024-11-07</td>
+        <td>myblog</td>
+      </tr>
+      <tr class="post myblog" data-type="myblog" data-date="2024-11-07">
+        <td>New blog with Contentful as a headless CMS</td>
+        <td><p>This is my attempted at creating a content for a blog page using contentful. So far this is very simple, just like strapi. I may even like this better because its not only a headless CMS but also a standard CMS. Also, its free, unlike strapi where my free subscription ends in 13 days lol.</p>
+</td>
+        <td>2024-11-07</td>
+        <td>myblog</td>
+      </tr>
+      <tr class="post writeUps" data-type="writeUps" data-date="2024-11-22">
+        <td>Strapi Implementation</td>
+        <td><p>This post explains how to set up and retrieve blog data using two popular headless CMS platforms, Strapi and Contentful. It covers the process of structuring collections, integrating JavaScript to fetch content securely, and showcasing how the blogs appear when powered by each platform. This guide provides a straightforward comparison to help you understand their setup and functionality.</p>
+</td>
+        <td>2024-11-22</td>
+        <td>writeUps</td>
+      </tr>
+      <tr class="post writeUps" data-type="writeUps" data-date="2024-11-19">
+        <td>Headless CMS Systems: Overview and Comparison</td>
+        <td><p>This write-up explores different headless CMS platforms and compares their features to understand their practical applications in modern web development. The purpose is to identify how each CMS caters to various project needs, balancing factors like customization, scalability, and ease of use. By evaluating CMS options such as Strapi, Contentful, Sanity, Prismic, and Ghost, I aimed to determine the best tools for specific scenarios, emphasizing their strengths and limitations. The comparison highlights the importance of CMS selection in streamlining workflows and achieving efficient content management solutions.</p></td>
+        <td>2024-11-19</td>
+        <td>writeUps</td>
+      </tr>
+      <tr class="post writeUps" data-type="writeUps" data-date="2024-11-19">
+        <td>Templating Languages</td>
+        <td><p>This lab write-up explores various templating languages and their role in modern web development. The goal was to understand how these tools streamline static site generation (SSG) and enhance flexibility, simplicity, and performance. This exercise also included learning about 11ty’s configuration options and the significance of organizing file structures effectively. By comparing popular templating engines and their features, I gained insights into selecting the right tools for different project needs.</p>
+</td>
+        <td>2024-11-19</td>
+        <td>writeUps</td>
+      </tr>
+  </tbody>
+</table>
+
+
+<script>
+  $(document).ready(function () {
+    // Search by title input
+    $("#myInput").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tbody tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      });
+    });
+
+    // Filter by content type
+    $("#contentTypeFilter").on("change", function () {
+      var selectedType = $(this).val();
+      $("#myTable tbody tr").filter(function () {
+        if (selectedType === "all") {
+          $(this).show();
+        } else {
+          $(this).toggle($(this).data("type") === selectedType);
+        }
+      });
+    });
+  });
+</script>
+<style>
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #090122;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background-color: #090122;
+}
+tr:hover {
+  background-color: #0e65bb;
+}
+
+</style>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
