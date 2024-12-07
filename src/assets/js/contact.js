@@ -13,7 +13,7 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
     form.style.display = 'none';
   
     try {
-      const response = await fetch('/.netlify/functions/contact', {
+      const response = await fetch('/netlify/functions/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
