@@ -6,20 +6,30 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const { name, email, message } = JSON.parse(event.body);
+  const { name, email, message, subject } = JSON.parse(event.body);
 
   const emailContent = {
     to: ['mohammed.h.p@hotmail.com'], //, 'adam.kunz+inft@durhamcollege.ca'
     from: 'no-reply@yourdomain.com',
     replyTo: email,
     subject: `New Contact Form Submission from ${name}`,
-    text: `Message: ${message}\nFrom: ${name}\nEmail: ${email}`,
+    text: `Message: ${message}\nFrom: ${name}\nEmail: ${email}\nSubject: ${subject}`,
   };
 
   try {
     await sgMail.send(emailContent);
-    return { statusCode: 200, body: JSON.stringify({ message: 'Email sent successfully!' }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Email sent successfully!' }),
+    };
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to send email.' }) };
+    console.error('Error:', error.response ? error.response.body : error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Failed to send email.',
+        details: error.response ? error.response.body : error.message,
+      }),
+    };
   }
 };

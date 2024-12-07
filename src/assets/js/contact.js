@@ -13,14 +13,15 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
   form.style.display = 'none';
 
   try {
-    const response = await fetch('/.netlify/functions/contact', {
+    const response = await fetch('/netlify/functions/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
 
-    const result = await response.json();
-    console.log(result);  // Log the result for debugging
+    // Log the raw response
+    const result = await response.json();  // Ensure the response is parsed as JSON
+    console.log(result);  // Log the result to see the response
     document.getElementById('response-message').textContent = result.message;
   } catch (error) {
     console.error(error);  // Log the error for debugging
