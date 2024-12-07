@@ -21,6 +21,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("/src/public/css");
   // Passthrough copy for public files
   eleventyConfig.addPassthroughCopy("src/public");
+  eleventyConfig.addPassthroughCopy("src/assets");
   handlebars.registerHelper('ifCond', function(v1, v2, options) {
     if (v1 === v2) {
         return options.fn(this); // Render the block inside if true

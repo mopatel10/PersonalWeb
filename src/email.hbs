@@ -1,0 +1,46 @@
+---
+layout: layouts/base.hbs
+title: Contact me
+---
+
+<div class="section_10">
+  <div class="responsive-container-block container">
+    <form id="contact-form">
+      <div class="responsive-container-block form-container">
+        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 first-name" id="i10mt-5">
+          <p class="text-blk input-title">
+            Full Name
+          </p>
+          <input class="input" id="name" name="FirstName" placeholder="First Name" required>
+        </div>
+        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+          <p class="text-blk input-title">
+            Email Address
+          </p>
+          <input class="input" id="email" name="Email" placeholder="Email" required>
+        </div>
+        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12" id="i634i-5">
+          <p class="text-blk input-title">
+            Subject
+          </p>
+          <textarea class="textinput" id="subject" placeholder="Subject" required></textarea>
+        </div>
+        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-5">
+          <p class="text-blk input-title">
+            Message
+          </p>
+          <textarea class="textinput" id="message" placeholder="Write a message..." required></textarea>
+        </div>
+        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+          <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-3">
+            Send Message
+          </button>
+          <div id="spinner" style="display:none;">Sending...</div>
+        </div>
+      </div>
+    </form>
+    <div id="response-message" style="display:none;"></div>
+  </div>
+</div>
+
+<script src="/assets/js/contact.js" defer></script>
