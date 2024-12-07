@@ -9,8 +9,14 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
     message: form.message.value,
   };
 
+  // Show spinner and hide the form
   document.getElementById('spinner').style.display = 'block';
   form.style.display = 'none';
+
+  // Show spinner text, hide other messages
+  document.getElementById('response-message').style.display = 'block';
+  document.getElementById('thank-you-message').style.display = 'none';
+  document.getElementById('error-message').style.display = 'none';
 
   try {
     const response = await fetch('/.netlify/functions/contact', {
@@ -19,15 +25,17 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
       body: JSON.stringify(data),
     });
 
-    // Log the raw response
     const result = await response.json();  // Ensure the response is parsed as JSON
     console.log(result);  // Log the result to see the response
-    document.getElementById('response-message').textContent = result.message;
+
+    // Display success message
+    document.getElementById('thank-you-message').style.display = 'block';
   } catch (error) {
     console.error(error);  // Log the error for debugging
-    document.getElementById('response-message').textContent = 'An error occurred.';
+    // Display error message
+    document.getElementById('error-message').style.display = 'block';
   } finally {
+    // Hide the spinner after response is received
     document.getElementById('spinner').style.display = 'none';
-    document.getElementById('response-message').style.display = 'block';
   }
 });
