@@ -171,16 +171,7 @@ textarea.form-control {
     font-size: 16px;
   }
 }
-/* Spinner styles */
-.spinner {
-  border: 4px solid rgba(255, 255, 255, 0.3); /* Light color for background */
-  border-top: 4px solid #007BFF; /* Blue color for the spinning part */
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 20px auto;
-}
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -201,4 +192,24 @@ textarea.form-control {
 /* Spinner will be centered within the send button */
 .send-button.loading .alt-send-button {
   visibility: hidden;
+}
+#response-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Light color for background */
+  border-top: 4px solid #007BFF; /* Blue color for the spinning part */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+#thank-you-message {
+  font-size: 18px;
+  color: #007BFF;
+  margin-top: 20px;
 }
