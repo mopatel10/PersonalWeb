@@ -1,7 +1,5 @@
 [build]
   publish = "dist" # The folder containing your built site 
 
-[functions]
-  directory = "netlify/functions"
 
 
