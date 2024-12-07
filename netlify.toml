@@ -1,0 +1,5 @@
+[build]
+  publish = "dist" # The folder containing your built site 
+  functions = "netlify/functions" # Path to serverless functions folder
+  publish = "dist" 
+

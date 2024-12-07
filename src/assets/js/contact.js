@@ -5,7 +5,6 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
     const data = {
       name: form.name.value,
       email: form.email.value,
-      phone: form.phone.value,
       subject: form.subject.value,
       message: form.message.value,
     };
