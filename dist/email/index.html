@@ -111,47 +111,59 @@
         <div class="col-md-9">
             <main class="container my-5">
                 
-<div class="section_10">
-  <div class="responsive-container-block container">
-    <form id="contact-form">
-      <div class="responsive-container-block form-container">
-        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 first-name" id="i10mt-5">
-          <p class="text-blk input-title">
-            Full Name
-          </p>
-          <input class="input" id="name" name="FirstName" placeholder="First Name" required>
+<div class="contact-wrapper">
+
+  <!-- Right Contact Page (Form) -->
+  <div class="form-container">
+    <h3 class="section-header">Contact Me</h3>
+    <form id="contact-form" class="form-horizontal" role="form">
+      <div class="form-group">
+        <input type="text" class="form-control input" id="name" placeholder="Full Name" name="name" value="" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control input" id="email" placeholder="Email" name="email" value="" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control input" id="subject" placeholder="Subject" name="subject" value="" required>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control textinput" rows="10" placeholder="Write a message..." name="message" required></textarea>
+      </div>
+      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <div class="alt-send-button">
+          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
         </div>
-        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-          <p class="text-blk input-title">
-            Email Address
-          </p>
-          <input class="input" id="email" name="Email" placeholder="Email" required>
-        </div>
-        <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12" id="i634i-5">
-          <p class="text-blk input-title">
-            Subject
-          </p>
-          <textarea class="textinput" id="subject" placeholder="Subject" required></textarea>
-        </div>
-        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-5">
-          <p class="text-blk input-title">
-            Message
-          </p>
-          <textarea class="textinput" id="message" placeholder="Write a message..." required></textarea>
-        </div>
-        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
-          <button type="submit"class="submit-btn" id="w-c-s-bgc_p-1-dm-id-3">
-            Send Message
-          </button>
-          <div id="spinner" style="display:none;">Sending...</div>
-        </div>
+      </button>
+      <div id="response-message" style="display:none;">
+        <!-- Spinner for loading -->
+        <div id="spinner" class="spinner" style="display:none;"></div>
       </div>
     </form>
-    <div id="response-message" style="display:none;"></div>
   </div>
+
+  <!-- Left Contact Page (Contact Info) -->
+  <div class="direct-contact-container">
+    <h3 class="section-header">Get In Touch</h3>
+    <ul class="contact-list">
+      <li class="list-item"><i class="fa fa-map-marker fa-2x"></i><span class="contact-text place">Pickering, Ontario</span></li>
+      <li class="list-item"><i class="fa fa-phone fa-2x"></i><span class="contact-text phone">(647) 321-7868</span></li>
+      <li class="list-item"><i class="fa fa-envelope fa-2x"></i><span class="contact-text gmail"><a href="mailto:mohammed.h.p@hotmail.com">mohammed.h.p@hotmail.com</a></span></li>
+    </ul>
+    <hr>
+    <ul class="social-media-list">
+  <li><a href="#" target="_blank" class="contact-icon"><img src="/public/images/social/github.png" alt="GitHub"></a></li>
+  <li><a href="#" target="_blank" class="contact-icon"><img src="/public/images/social/linkedin.png" alt="LinkedIn"></a></li>
+  
+</ul>
+
+    <hr>
+  </div>
+  </div>
+
 </div>
 
 <script src="/assets/js/contact.js" defer></script>
+
             </main>
         </div>
     </div>

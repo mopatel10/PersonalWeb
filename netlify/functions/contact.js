@@ -18,9 +18,9 @@ exports.handler = async (event) => {
   const replyToEmail = isValidEmail(email) ? email : 'no-reply@yourdomain.com';
 
   const emailContent = {
-    to: ['mohammed.h.p2003@gmail.com'], // your email address
+    to: ['mohammed.h.p2003@gmail.com'], 
     from: 'mohammed.h.p@hotmail.com',
-    replyTo: email, // Use the validated email or default
+    replyTo: email, 
     subject: `New Contact Form Submission from ${name}`,
     text: `Message: ${message}\nFrom: ${name}\nEmail: ${email}\nSubject: ${subject}`,
   };
