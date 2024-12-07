@@ -196,6 +196,7 @@ textarea.form-control {
 #response-message {
   text-align: center;
   margin-top: 20px;
+  color: #ddd;
 }
 
 .spinner {
@@ -210,6 +211,6 @@ textarea.form-control {
 
 #thank-you-message {
   font-size: 18px;
-  color: #007BFF;
+  color: #fafafa;
   margin-top: 20px;
 }
