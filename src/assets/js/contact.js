@@ -19,6 +19,7 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
   };
 
   try {
+    await new Promise(resolve => setTimeout(resolve, 2000)); // Simulates a 2-second delay
     const response = await fetch('/.netlify/functions/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
