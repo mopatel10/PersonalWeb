@@ -7,6 +7,7 @@ const isValidEmail = (email) => {
   return emailPattern.test(email);
 };
 
+// ONLY POST method allowed
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
@@ -17,6 +18,7 @@ exports.handler = async (event) => {
   // Check if the email is valid; if not, set a default replyTo email
   const replyToEmail = isValidEmail(email) ? email : 'no-reply@yourdomain.com';
 
+  // Create the email content
   const emailContent = {
     to: ['mohammed.h.p2003@gmail.com', 'adam.kunz@durhamcollege.ca'],
     from: 'mohammed.h.p@hotmail.com',
