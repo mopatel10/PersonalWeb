@@ -208,7 +208,9 @@ textarea.form-control {
   height: 120px;
   animation: spin 2s linear infinite;
 }
-
+#spinner[style*="display: block"] {
+  display: block !important; /* Force visibility when 'block' is set */
+}
 #thank-you-message {
   font-size: 18px;
   color: #080808;

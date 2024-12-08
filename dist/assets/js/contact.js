@@ -6,7 +6,7 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
   const thankYouMessage = document.getElementById('thank-you-message');
   const errorMessage = document.getElementById('error-message');
 
-  // Reset visibility of messages and spinner
+  // Reset visibility of messages and show spinner
   thankYouMessage.style.display = 'none';
   errorMessage.style.display = 'none';
   spinner.style.display = 'block';
@@ -19,7 +19,8 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
   };
 
   try {
-    await new Promise(resolve => setTimeout(resolve, 2000)); // Simulates a 2-second delay
+    console.log('Sending request...');
+    await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate server delay
     const response = await fetch('/.netlify/functions/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -28,19 +29,16 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
 
     if (response.ok) {
       const result = await response.json();
-      console.log(result);
-      // Display success message
+      console.log('Response received:', result);
       thankYouMessage.style.display = 'block';
-      form.reset(); // Clear the form
+      form.reset();
     } else {
       throw new Error('Failed to send message');
     }
   } catch (error) {
     console.error(error);
-    // Display error message
     errorMessage.style.display = 'block';
   } finally {
-    // Hide the spinner regardless of success or failure
     spinner.style.display = 'none';
   }
 });
