@@ -2,21 +2,21 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
   event.preventDefault();
   
   const form = event.target;
+  const spinner = document.getElementById('spinner');
+  const thankYouMessage = document.getElementById('thank-you-message');
+  const errorMessage = document.getElementById('error-message');
+
+  // Reset visibility of messages and spinner
+  thankYouMessage.style.display = 'none';
+  errorMessage.style.display = 'none';
+  spinner.style.display = 'block';
+
   const data = {
-    name: form.name.value,
-    email: form.email.value,
-    subject: form.subject.value,
-    message: form.message.value,
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    subject: form.subject.value.trim(),
+    message: form.message.value.trim(),
   };
-
-  // Show spinner and hide the form
-  document.getElementById('spinner').style.display = 'block';
-  form.style.display = 'none';
-
-  // Show spinner text, hide other messages
-  document.getElementById('response-message').style.display = 'block';
-  document.getElementById('thank-you-message').style.display = 'none';
-  document.getElementById('error-message').style.display = 'none';
 
   try {
     const response = await fetch('/.netlify/functions/contact', {
@@ -25,17 +25,21 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
       body: JSON.stringify(data),
     });
 
-    const result = await response.json();  // Ensure the response is parsed as JSON
-    console.log(result);  // Log the result to see the response
-
-    // Display success message
-    document.getElementById('thank-you-message').style.display = 'block';
+    if (response.ok) {
+      const result = await response.json();
+      console.log(result);
+      // Display success message
+      thankYouMessage.style.display = 'block';
+      form.reset(); // Clear the form
+    } else {
+      throw new Error('Failed to send message');
+    }
   } catch (error) {
-    console.error(error);  // Log the error for debugging
+    console.error(error);
     // Display error message
-    document.getElementById('error-message').style.display = 'block';
+    errorMessage.style.display = 'block';
   } finally {
-    // Hide the spinner after response is received
-    document.getElementById('spinner').style.display = 'none';
+    // Hide the spinner regardless of success or failure
+    spinner.style.display = 'none';
   }
 });
