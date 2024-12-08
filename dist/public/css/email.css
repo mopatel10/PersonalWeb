@@ -190,15 +190,7 @@ textarea.form-control {
   align-items: center;
 }
 
-/* Spinner will be centered within the send button */
-.send-button.loading .alt-send-button {
-  visibility: hidden;
-}
-#response-message {
-  text-align: center;
-  margin-top: 20px;
-  color: #ddd;
-}
+
 
 .spinner {
   border: 16px solid #f3f3f3; /* Light grey */
@@ -211,11 +203,7 @@ textarea.form-control {
 #spinner[style*="display: block"] {
   display: block !important; /* Force visibility when 'block' is set */
 }
-#thank-you-message {
-  font-size: 18px;
-  color: #080808;
-  margin-top: 20px;
-}
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
