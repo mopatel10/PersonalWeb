@@ -18,11 +18,11 @@ exports.handler = async (event) => {
   const replyToEmail = isValidEmail(email) ? email : 'no-reply@yourdomain.com';
 
   const emailContent = {
-    to: ['mohammed.h.p2003@gmail.com'], //adam.kunz@durhamcollege.ca
+    to: ['mohammed.h.p2003@gmail.com', 'adam.kunz@durhamcollege.ca'],
     from: 'mohammed.h.p@hotmail.com',
     replyTo: email, 
     subject: `New Contact Form Submission from ${name}`,
-    text: `Message: ${message}\nFrom: ${name}\nEmail: ${email}\nSubject: ${subject}`,
+    text: `From: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}\n`,
   };
 
   try {

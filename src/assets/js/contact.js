@@ -1,6 +1,8 @@
+// Listen for the buttom click
 document.getElementById('contact-form').addEventListener('submit', async (event) => {
   event.preventDefault();
 
+  // Get the elements and assign to variables
   const form = event.target;
   const submitButton = document.getElementById('submit');
   const spinner = document.createElement('div');
@@ -8,8 +10,9 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
 
   // Add the spinner to the button
   submitButton.appendChild(spinner);
-  submitButton.classList.add('loading'); // Add the 'loading' class
+  submitButton.classList.add('loading'); 
 
+  // Get data from form
   const data = {
     name: form.name.value.trim(),
     email: form.email.value.trim(),
@@ -17,6 +20,7 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
     message: form.message.value.trim(),
   };
 
+  // try fetching the serverless function response deployed on netlify
   try {
     const response = await fetch('/.netlify/functions/contact', {
       method: 'POST',
