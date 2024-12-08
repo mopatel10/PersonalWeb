@@ -1,15 +1,14 @@
 document.getElementById('contact-form').addEventListener('submit', async (event) => {
   event.preventDefault();
-  
-  const form = event.target;
-  const spinner = document.getElementById('spinner');
-  const thankYouMessage = document.getElementById('thank-you-message');
-  const errorMessage = document.getElementById('error-message');
 
-  // Reset visibility of messages and show spinner
-  thankYouMessage.style.display = 'none';
-  errorMessage.style.display = 'none';
-  spinner.style.display = 'block';
+  const form = event.target;
+  const submitButton = document.getElementById('submit');
+  const spinner = document.createElement('div');
+  spinner.className = 'spinner';
+
+  // Add the spinner to the button
+  submitButton.appendChild(spinner);
+  submitButton.classList.add('loading'); // Add the 'loading' class
 
   const data = {
     name: form.name.value.trim(),
@@ -19,8 +18,6 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
   };
 
   try {
-    console.log('Sending request...');
-    await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate server delay
     const response = await fetch('/.netlify/functions/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -28,17 +25,20 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
     });
 
     if (response.ok) {
-      const result = await response.json();
-      console.log('Response received:', result);
-      thankYouMessage.style.display = 'block';
-      form.reset();
+      // Simulate success for demonstration
+      setTimeout(() => {
+        alert('Message sent successfully!');
+        form.reset();
+      }, 1000);
     } else {
       throw new Error('Failed to send message');
     }
   } catch (error) {
-    console.error(error);
-    errorMessage.style.display = 'block';
+    console.error('Error:', error);
+    alert('Something went wrong. Please try again later.');
   } finally {
-    spinner.style.display = 'none';
+    // Remove the spinner and reset the button state
+    spinner.remove();
+    submitButton.classList.remove('loading');
   }
 });

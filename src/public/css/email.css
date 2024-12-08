@@ -179,31 +179,51 @@ textarea.form-control {
   100% { transform: rotate(360deg); }
 }
 
+/* Spinner positioned inside the button */
 .send-button {
   position: relative;
-  width: 100%;
-}
-
-.send-button .alt-send-button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
+.send-button .spinner {
+  position: absolute;
+  display: none; /* Initially hidden */
+}
 
+.send-button.loading .spinner {
+  display: inline-block; /* Show spinner when loading class is added */
+}
+
+.send-button.loading .alt-send-button {
+  visibility: hidden; /* Hide button text while spinner is visible */
+}
+
+
+
+#response-message {
+  text-align: center;
+  margin-top: 20px;
+  color: #ddd;
+}
 
 .spinner {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 50px;
+  height: 50px;
   animation: spin 2s linear infinite;
 }
 #spinner[style*="display: block"] {
   display: block !important; /* Force visibility when 'block' is set */
 }
-
+#thank-you-message {
+  font-size: 18px;
+  color: #080808;
+  margin-top: 20px;
+}
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
