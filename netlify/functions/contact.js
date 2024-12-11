@@ -18,9 +18,9 @@ exports.handler = async (event) => {
   // Check if the email is valid; if not, set a default replyTo email
   const replyToEmail = isValidEmail(email) ? email : 'no-reply@yourdomain.com';
 
-  // Create the email content adam.kunz@durhamcollege.ca
+  // Create the email content 
   const emailContent = {
-    to: ['mohammed.h.p2003@gmail.com'],
+    to: ['mohammed.h.p2003@gmail.com', 'adam.kunz@durhamcollege.ca'],
     from: 'mohammed.h.p@hotmail.com',
     replyTo: email, 
     subject: `New Contact Form Submission from ${name}`,
